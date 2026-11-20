@@ -8,6 +8,13 @@ EIA Open Data API ──► Python producer ──► Redpanda (Kafka API) ─�
                       each event                                    idempotent writes    intensity    dashboard
 ```
 
+**Live dashboard:** hourly carbon intensity by grid region, cleanest hour, and fuel mix
+![Dashboard](docs/images/dashboard1.png)
+**Live dashboard:** hourly carbon intensity by grid region, cleanest hour, and fuel mix
+![Dashboard](docs/images/dashboard2.png)
+
+
+
 **Question it answers:** *How clean is the grid in Texas, PJM, MISO, California and New York right now, and when was the cleanest hour today?*
 
 ## Quick start
@@ -44,7 +51,7 @@ intensity (g CO₂/kWh) = Σ (MWh_fuel × kg CO₂/MWh_fuel) / Σ MWh_fuel
 
 Emission factors live in `src/gridcarbon/config.py` (coal 1000, gas 410, oil 850, all others 0 kg/MWh). **These are approximate starting values.** Replacing them with EPA eGRID factors is listed under next steps.
 
-## Design decisions (good interview material)
+## Design decisions 
 
 | Decision | Why |
 |---|---|
